@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load staticfiles %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="Granville">
+	<title>Granville</title>
+	<link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+   <link rel="stylesheet" href="{% static '/css/font-awesome.css' %}">
+	<link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}"> 
+	<link rel="stylesheet" href="{% static '/css/bootstrap-theme.css' %}" media="screen"> 
+	<link rel="stylesheet" href="{% static '/css/style1.css' %}">
+    <link rel='stylesheet' id='camera-css' href="{% static '/css/camera.css' %}" type='text/css' media='all'>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="{% static '/js/html5shiv.js' %}"></script>
+	<script src="{% static '/js/respond.min.js' %}"></script>
+
+	<![endif]-->
+</head>
+<body>
+
+    <div id="footer">
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="index_fr.html">Français</a>
+                                <a href="index.html">English</a>
+                                <a href="index.html">عربية‎ لغة</a>
+                                <a href="index_cn.html">简体中文</a>
+                                <a href="index_jp.html">日本語</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">Local: Dubai 38°C</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="navbar navbar-inverse">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="{% static '/images/logo.png' %}" alt="Logo">
+                </a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right mainNav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="{% url 'booking:hotel' %}">Hotel</a></li>
+                    <li><a href="services.html">Offers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <header id="head">
+        <div class="container">
+            <div class="fluid_container">
+                <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
+                    <div data-thumb="{% static '/images/dubai.jpg' %}" data-src="{% static '/images/dubai.jpg' %}">
+                    </div> 
+                    <div data-thumb="{% static '/images/Sheraton_Jumeirah_Beach_Resort_3.jpg' %}" data-src="{% static '/images/Sheraton_Jumeirah_Beach_Resort_3.jpg' %}">
+                    </div>
+                    <div data-thumb="{% static '/images/one-and-only-the-palm.jpg' %}" data-src="{% static '/images/one-and-only-the-palm.jpg' %}">
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="head-box" style="margin-top:-20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center last">Granville Hotel offers you the utmost fun of living</h2> 
+                    <p class="text-center last">Check availability at Granville and discover the leisure</p>
+                    <div class="search-panel">
+                        <form class="form-inline" role="form">
+
+<!--                         <div class="form-group hidden-xs adv">
+                            <div class="input-group">
+                                <div class="input-group-addon">Rooms</div>
+                                <div>
+                                    <select class="form-control price">
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div> 
+<!-- 
+                        <div class="form-group hidden-xs adv">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Check In</div>
+                                    <input class="form-control price" type="text" name="cindate">
+                                </div>
+                            </div>
+    
+                            <div class="form-group hidden-xs adv">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Check Out</div>
+                                    <input class="form-control price" type="text"  name="coutdate">
+                                </div>
+                            </div>
+    
+                             <div class="form-group">  
+                             
+                             Checkin date:<input type="text" name="cindate">
+                             Checkout date:<input type="text" name="coutdate">
+                             <input type="submit" value="submit"><br/>
+                        </form> -->
+                        
+                         
+                         <form action="{% url 'avail' %}" method="post">
+                              {% csrf_token %}
+                               Checkin date:<input type="text" name="cindate">
+                               Checkout date:<input type="text" name="coutdate">
+                               <input type="submit" value="Check availablity"><br>
+                               
+                             </div> 
+                          </form>
+                             
+                             
+                           
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="container">
+        <div class="row">
+            <div class="section-heading">
+                <h2>Granville Hotel</h2>
+                <p>The Granville Sky Tower is located in one of the most beautiful coastline scenery destination of Dubai, the United Arab Emirates. You can have all-around ornamental ocean view and enjoy a stretch of nearly 700 metres of private white sand beach. Granville Beach Resort is nestled in lush tropical gardens, close to the one of the best shark-watch spot and coral group in the world. And the Great Castle Hotel is located in a luxurious landscaped gardens, offering an experience of living in medieval environment for travelers.</p>
+                <p>Granville has well-designed 229 Sky Tower rooms, 162 Resort rooms and 109 Castle rooms for choice. You can enjoy hundred metres birdview of the ocean from rooftop swimming pool, and hundred metres zenith SPA and unparalleled honour helicopter tour, the world-class golf courses and top theaters. We make the perfect fusion of delicate and delicious food, meticulous and detailed service to provide extraordinary experience for travelers all over the world with unique taste of life.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-cloud fa-2x"></i>
+                    <div class="text">
+                        <h3>Beach</h3>
+                        Private beach with smooth white sand and water sports.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-heart fa-2x"></i>
+                    <div class="text">
+                        <h3>Chamberlain</h3>
+                        Comfortable experience with a 24-hour delicate chamberlain service.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-cutlery fa-2x"></i>
+                    <div class="text">
+                        <h3>Restaurant</h3>
+                        A selection of exotic and Michelin starred restaurants and bars.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-shower fa-2x"></i>
+                    <div class="text">
+                        <h3>Spa</h3>
+                        Ultimate destination to luxuriate the on-air Spa service.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-ship fa-2x"></i>
+                    <div class="text">
+                        <h3>Yacht</h3>
+                        Free choice of private yacht to sail to Arabian Gulf.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-star fa-2x"></i>
+                    <div class="text">
+                        <h3>Water Park</h3>
+                        Complimentary access to Water Park for the duration of your stay.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-child fa-2x"></i>
+                    <div class="text">
+                        <h3>Kids Club</h3>
+                        Complimentary access to Kids club to enjoy wonderful parenting time.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-diamond fa-2x"></i>
+                    <div class="text">
+                        <h3>Plaza</h3>
+                        Plaza with more than 90000 square foot and 120 brands.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-coffee fa-2x"></i>
+                    <div class="text">
+                        <h3>Conference Room</h3>
+                        More than 30 multifunctional exhibition halls and conference rooms.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+	
+
+    <footer id="footer">
+        <div class="container">
+            <div class="social text-center">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="{% url 'hotel' %}">About Granville</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">© Granville International</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="{% static '/js/modernizr-latest.js' %}"></script> 
+	<script type='text/javascript' src='{% static '/js/jquery.min.js' %}'></script>
+    <script type='text/javascript' src='{% static '/js/fancybox/jquery.fancybox.pack.js' %}'></script>
+    
+    <script type='text/javascript' src='{% static '/js/jquery.mobile.customized.min.js' %}'></script>
+    <script type='text/javascript' src='{% static '/js/jquery.easing.1.3.js' %}'></script> 
+    <script type='text/javascript' src='{% static '/js/camera.min.js' %}'></script> 
+    <script src="{% static '/js/bootstrap.min.js' %}"></script> 
+	<script src="{% static '/js/custom.js' %}"></script>
+    <script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_4').camera({
+				height: '600',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: false,
+				hover: false,
+				opacityOnGrid: false,
+				imagePath: '{% static '/images/' %}'
+			});
+
+		});
+	</script>
+    
+</body>
+</html>

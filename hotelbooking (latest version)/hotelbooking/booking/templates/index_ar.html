@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load staticfiles %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="Granville">
+	<title>Granville</title>
+	<link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/font-awesome.css' %}">
+	<link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}"> 
+	<link rel="stylesheet" href="{% static '/css/bootstrap-theme.css' %}" media="screen"> 
+	<link rel="stylesheet" href="{% static '/css/style1.css' %}">
+    <link rel='stylesheet' id='camera-css' href="{% static '/css/camera.css' %}" type='text/css' media='all'>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="{% static '/js/html5shiv.js' %}"></script>
+	<script src="{% static '/js/respond.min.js' %}"></script>
+	<![endif]-->
+</head>
+<body>
+
+    <div id="footer">
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="{% url 'index_fr' %}">Français</a>
+                                <a href="{% url 'index' %}">English</a>
+                                <a href="{% url 'index_ar' %}">عربية‎ لغة</a>
+                                <a href="{% url 'index_cn' %}">简体中文</a>
+                                <a href="{% url 'index_jp' %}">日本語</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">38 °C محلي دبي</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="navbar navbar-inverse">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static '/images/logo.png' %}" alt="Logo">
+                </a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right mainNav">
+                    <li class="active"><a href="{% url 'index' %}">منزل</a></li>
+                    <li><a href="{% url 'hotel' %}">فندق</a></li>
+                    <li><a href="{% url 'services' %}">الخدمات</a></li>
+                    <li><a href="{% url 'contact' %}">اتصل</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <header id="head">
+        <div class="container">
+            <div class="fluid_container">
+                <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
+                    <div data-thumb="{% static '/images/dubai.jpg' %}" data-src="{% static '/images/dubai.jpg' %}">
+                    </div> 
+                    <div data-thumb="{% static '/images/Sheraton_Jumeirah_Beach_Resort_3.jpg' %}" data-src="{% static '/images/Sheraton_Jumeirah_Beach_Resort_3.jpg' %}">
+                    </div>
+                    <div data-thumb="{% static '/images/one-and-only-the-palm.jpg' %}" data-src="{% static '/images/one-and-only-the-palm.jpg' %}">
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="head-box" style="margin-top:-20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center last">فندق غرانفيل يقدم لك متعة قصوى من المعيشة</h2> 
+                    <p class="text-center last">تحقق من توافرها في غرانفيل واكتشاف أوقات الفراغ</p>
+                    <div class="search-panel">
+                        <form class="form-inline" action="{% url 'avail' %}" method="post">
+                              {% csrf_token %}
+                    <!-- 
+                    role="form" 
+                        <div class="form-group hidden-xs adv">
+                            <div class="input-group">
+                                <div class="input-group-addon">Rooms</div>
+                                <div>
+                                    <select class="form-control price">
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div> -->
+                    
+                              
+                        <div class="form-group hidden-xs adv">
+                            <div class="input-group">
+                                <div class="input-group-addon">تحقق في</div>
+                                <input class="form-control price" type="date" name="inday">
+                            </div>
+                        </div>
+
+                        <div class="form-group hidden-xs adv">
+                            <div class="input-group">
+                                <div class="input-group-addon">الدفع</div>
+                                <input class="form-control price" type="date" name="outday">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="التحقق من الصلاحية" class="btn btnsearch"><br>
+                        </div>     
+                    
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="container">
+        <div class="row">
+            <div class="section-heading">
+                <h2>غرانفيل هوتل</h2>
+                <p>يقع برج جرانفيل سكاي تاور في واحدة من أجمل الوجهات الساحلية في دبي، الإمارات العربية المتحدة. يمكنك الاستمتاع بمناظر المحيط الزينة في جميع أنحاء الفندق والاستمتاع بطول حوالي 700 متر من الشاطئ الرملي الأبيض الخاص. يقع منتجع غرانفيل بيتش ريسورت في حدائق استوائية مورقة، على مقربة من واحدة من أفضل بقعة لمراقبة سمك القرش والمجموعة المرجانية في العالم. ويقع فندق غريت كاستل هوتل في حدائق ذات مناظر طبيعية فخمة، ويوفر تجربة العيش في بيئة القرون الوسطى للمسافرين.</p>
+                <p>يحتوي فندق غرانفيل على 229 غرفة سكاي تاور مصممة بشكل جيد و 162 غرفة منتجع و 109 غرفة كاستل للاختيار. يمكنك التمتع مائة متر بيردفيو من المحيط من حمام سباحة على السطح، ومئات الأمتار زينيث سبا وجولة هليكوبتر الشرف لا مثيل لها، وملاعب الغولف على مستوى عالمي والمسارح العليا. نحن جعل الانصهار الكمال من الطعام لذيذ ولذيذ، دقيق وتفصيل الخدمة لتوفير تجربة غير عادية للمسافرين في جميع أنحاء العالم مع طعم فريد من الحياة.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-cloud fa-2x"></i>
+                    <div class="text">
+                        <h3>شاطئ بحر</h3>
+                        شاطئ خاص مع الرمال البيضاء الناعمة والرياضات المائية.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-heart fa-2x"></i>
+                    <div class="text">
+                        <h3>بتلر</h3>
+                        تجربة مريحة مع خدمة تشامبرلين حساسة على مدار 24 ساعة.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-cutlery fa-2x"></i>
+                    <div class="text">
+                        <h3>مطعم</h3>
+                        مجموعة مختارة من المطاعم الحائزة على نجمة وميلشلين ذات النجوم المميزة.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-moon-o fa-2x"></i>
+                    <div class="text">
+                        <h3>منتجع صحي</h3>
+                        في نهاية المطاف وجهة إلى لوكسوريات على الهواء سبا خدمة.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-flag fa-2x"></i>
+                    <div class="text">
+                        <h3>يخت</h3>
+                        حرية اختيار اليخت الخاص للابحار إلى الخليج العربي.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-star fa-2x"></i>
+                    <div class="text">
+                        <h3>ملاهي مائية</h3>
+                        الدخول المجاني إلى الحديقة المائية طوال مدة إقامتك في الفندق.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-smile-o fa-2x"></i>
+                    <div class="text">
+                        <h3>نادي الأطفال</h3>
+                        دخول مجاني إلى نادي الأطفال للاستمتاع بالوقت الأبوة والأمومة الرائع.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-tag fa-2x"></i>
+                    <div class="text">
+                        <h3>بلازا</h3>
+                        بلازا مع أكثر من 90000 قدم مربع و 120 علامة تجارية.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-coffee fa-2x"></i>
+                    <div class="text">
+                        <h3>غرفة المؤتمرات</h3>
+                        أكثر من 30 قاعات المعارض متعددة الوظائف وقاعات المؤتمرات.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+	
+
+    <footer id="footer">
+        <div class="container">
+            <div class="social text-center">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="{% url 'hotel' %}">حول جرانفيل</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">© غرانفيل الدولية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="{% static '/js/modernizr-latest.js' %}"></script> 
+	<script type='text/javascript' src='{% static '/js/jquery.min.js' %}'></script>
+    <script type='text/javascript' src='{% static '/js/fancybox/jquery.fancybox.pack.js' %}'></script>
+    
+    <script type='text/javascript' src='{% static '/js/jquery.mobile.customized.min.js' %}'></script>
+    <script type='text/javascript' src='{% static '/js/jquery.easing.1.3.js' %}'></script> 
+    <script type='text/javascript' src='{% static '/js/camera.min.js' %}'></script> 
+    <script src="{% static '/js/bootstrap.min.js' %}"></script> 
+	<script src="{% static '/js/custom.js' %}"></script>
+    <script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_4').camera({
+				height: '600',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: false,
+				hover: false,
+				opacityOnGrid: false,
+				imagePath: '{% static '/images/' %}'
+			});
+
+		});
+	</script>
+    
+</body>
+</html>

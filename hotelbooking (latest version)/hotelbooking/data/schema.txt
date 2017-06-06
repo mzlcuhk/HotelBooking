@@ -1,0 +1,14 @@
+booking
+b_id(PK),bname,email,phone,bsdate,b_daysno
+
+cust_info
+c_id(PK),fname,lname,add,email,country,gender,title,phone,gender
+
+rooms
+r_id(PK),rt_id(FK),floor
+
+room_type
+rt_id(PK),room_type,maxno,b_price,area,bed_no,quantity,boat,parking,library,cinema,plift
+
+booking_has
+b_id(PK),r_id(FK),c_id(FK)

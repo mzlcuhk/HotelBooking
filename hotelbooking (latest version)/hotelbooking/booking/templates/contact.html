@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Granville">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/font-awesome1.css' %}">
+    <link rel="stylesheet" href="{% static '/css/font-awesome.min1.css' %}"> 
+    <link rel="stylesheet" href="{% static '/css/bootstrap-theme.css' %}" media="screen"> 
+    <link rel="stylesheet" href="{% static '/css/style1.css' %}">
+    <link rel='stylesheet' id='camera-css' href="{% static '/css/camera.css' %}" type='text/css' media='all'>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="{% static '/js/html5shiv.js' %}"></script>
+    <script src="{% static '/js/respond.min.js' %}"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div id="footer">
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="index_fr.html">Français</a>
+                                <a href="index.html">English</a>
+                                <a href="index.html">عربية‎ لغة</a>
+                                <a href="index_cn.html">简体中文</a>
+                                <a href="index_jp.html">日本語</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">Local: Dubai 38°C</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="navbar navbar-inverse">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static '/images/logo.png' %}" alt="Logo">
+                </a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right mainNav">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'hotel' %}">Hotel</a></li>
+                    <li><a href="{% url 'services' %}">Offers</a></li>
+                    <li class="active"><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <header id="head" class="secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1>Contact Us</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+	<section class="container">
+
+		<div class="row">
+
+			<article class="col-md-8 maincontent">
+				<h4>We like to hear from you!</h4>
+				<h4>There are many ways you can reach us.</h4>
+				<br/>
+				<h2>Rooms</h2>
+				<h4>Telephone: +971 4 7300001</h4>
+				<h4>Fax: +971 4 9962058</h4>
+				<h4>Room Reservations: reservations@granville.com</h4>
+				<h4>Room Information: roominfo@granville.com</h4>
+
+				<h2>Restaurants & Bars</h2>
+				<h4>Telephone: +971 4 7300002</h4>
+				<h4>Fax: +971 4 9962058</h4>
+				<h4>Restaurant Reservations: restaurants@granville.com</h4>
+				<h4>Restaurant Information: restinfo@granville.com</h4>
+
+				<h2>SPA</h2>
+				<h4>Telephone: +971 4 7300003</h4>
+				<h4>Fax: +971 4 9962058</h4>
+				<h4>SPA Reservations: spa@granville.com</h4>
+				<h4>SPA Information: spainfo@granville.com</h4>
+
+				<h2>Beach</h2>
+				<h4>Telephone: +971 4 7300004</h4>
+				<h4>Fax: +971 4 9962058</h4>
+				<h4>Beach Information: beachinfo@granville.com</h4>
+
+				<h2>Tours</h2>
+				<h4>Telephone: +971 4 7300005</h4>
+				<h4>Fax: +971 4 9962058</h4>
+				<h4>Ocean Tour: ocean@granville.com</h4>
+				<h4>Dubai Sightseeing: dubai@granville.com</h4>
+				<h4>Helicopter Tour: heli@granville.com</h4>
+				<h4>Tour Information: tourinfo@granville.com</h4>
+
+				<h2>Deluxe Entertainment</h2>
+				<h4>Telephone: +971 4 7300006</h4>
+				<h4>Fax: +971 4 9962058</h4>
+				<h4>Golf Course Reservations: golf@granville.com</h4>
+				<h4>Theatre: theatre@granville.com</h4>
+				<h4>Water Park: waterpark@granville.com</h4>
+				<h4>Kids Clud: kidsclub@granville.com</h4>
+				<h4>Entertainment Information: enterinfo@granville.com</h4>
+
+			</article>
+
+			<aside class="col-md-4 sidebar sidebar-right">
+				<div class="row panel">
+					<div class="col-xs-12">
+						<h2>Your Reservation</h2>
+						<form name="sentMessage" id="contactForm" action="{% url 'search' %}" method="post" novalidate> 
+				            {% csrf_token %}
+                            <div class="control-group">
+		                        <div class="controls">
+                                    <h4>Search booking number:</h4>
+                                    <input type="text" class="form-control" name="bid"/>
+                                </div>
+                            </div>
+					</div>
+				</div>
+
+				<div class="form-group"> 
+				    <input type="submit" value="Search" class="btn btnsearch"><br>
+				</div>
+		        </form>
+			</aside>
+		</div>
+	</section>
+
+	
+
+    <footer id="footer">
+        <div class="container">
+            <div class="social text-center">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="{% url 'hotel' %}">About Granville</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">© Granville International</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>  
+    <script src="contact/jqBootstrapValidation.js"></script>
+    <script src="contact/contact_me.js"></script>
+	<script src="assets/js/custom.js"></script>
+
+</body>
+</html>

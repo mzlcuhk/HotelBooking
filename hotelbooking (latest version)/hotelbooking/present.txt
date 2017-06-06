@@ -1,0 +1,18 @@
+This is our webpage, 
+In the homepage, as a web-visitor, you can input your desire date of check-in and check-out first. then click the check availability buttom. It will lead you to the result page.
+
+In the result page, all different types of avaiblable room types are shown here. The box on the right side  shows the basic information of each type like the price, the number of visitors, the area and the left available room number.
+
+The filter at the top can help you to find the desire room type quickly. For example, here I want to book 2 ocean club suites and 1 beach suite. So I check the beach resort at the location list and click search. I choose the room types in the right box, you can notice the available rooms are 37 and 16, now we click book.
+
+The web will jump into the payment page.On the right side, there is booking information summery including the room type, date and total price of your order. You need to input your personal information first and click pay.
+
+The return page will tell the detail room ids you have booked and generate a order number for you. And later you can use this to review your booking information.
+
+Now I will show you how to do that search. And in the contact page, if you input your order number here and click search. You information of that order will be return.
+
+Then, I want to show you that the available book number again to confirm it works well. and you can see in the last we see here is 37 and 16, and now it become 36 and 14.
+
+Under the hood, in mysql, you can the booking order is inserted correctly.
+
+ 

@@ -1,0 +1,17 @@
+rt_id,room_type,maxno,b_price,area,bed_no,quantity,boat,parking,library,cinema,plift,image,bld
+rt001,One-Bedroom Suite,2,6000,150,1,76,1,1,FALSE,FALSE,FALSE,/images/01.jpg,ST
+rt002,Two-Bedroom Suite,4,11000,320,2,76,1,1,TRUE,TRUE,FALSE,/images/02.jpg,ST
+rt003,Three-Bedroom Suite,6,17000,550,3,38,1,1,TRUE,TRUE,FALSE,/images/03.jpg,ST
+rt004,Panoramic Two-Bedroom Suite,4,27000,570,2,18,1,1,TRUE,TRUE,FALSE,/images/04.jpg,ST
+rt005,Three-Bedroom Sky View Suite,6,38000,650,3,3,1,1,TRUE,TRUE,FALSE,/images/05.jpg,ST
+rt006,Presidential Suite,4,32000,580,2,12,1,1,TRUE,TRUE,FALSE,/images/06.jpg,ST
+rt007,Royal Suite,4,40000,750,2,6,1,1,TRUE,TRUE,FALSE,/images/07.jpg,ST
+rt008,Ocean Deluxe Suite,4,9000,300,2,76,2,4,TRUE,TRUE,TRUE,/images/08.jpg,BR
+rt009,Ocean Royal Suite,4,38000,700,2,10,2,4,TRUE,TRUE,TRUE,/images/09.jpg,BR
+rt010,Ocean Club Suite,6,21000,520,3,22,2,4,TRUE,TRUE,TRUE,/images/10.jpg,BR
+rt011,Beach Suite,4,20000,460,2,38,2,4,TRUE,TRUE,TRUE,/images/11.jpg,BR
+rt012,Underwater Two-Bedroom Suite,4,35000,350,2,15,2,4,TRUE,TRUE,TRUE,/images/12.jpg,BR
+rt013,Solar,4,15000,240,2,50,2,4,TRUE,TRUE,TRUE,/images/13.jpg,GC
+rt014,Lord's Chamber,4,20000,300,2,50,2,4,TRUE,TRUE,TRUE,/images/14.jpg,GC
+rt015,King'S Chamber,4,26000,500,2,6,2,4,TRUE,TRUE,TRUE,/images/15.jpg,GC
+rt016,Throne Room,4,38000,920,2,3,2,4,TRUE,TRUE,TRUE,/images/16.jpg,GC

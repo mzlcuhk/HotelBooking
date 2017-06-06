@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load staticfiles %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="Granville">
+	<title>Granville</title>
+	<link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/font-awesome.css' %}">
+	<link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}"> 
+	<link rel="stylesheet" href="{% static '/css/bootstrap-theme.css' %}" media="screen"> 
+	<link rel="stylesheet" href="{% static '/css/style1.css' %}">
+    <link rel='stylesheet' id='camera-css' href="{% static '/css/camera.css' %}" type='text/css' media='all'>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="{% static '/js/html5shiv.js' %}"></script>
+	<script src="{% static '/js/respond.min.js' %}"></script>
+	<![endif]-->
+</head>
+<body>
+
+    <div id="footer">
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="{% url 'index_fr' %}">Français</a>
+                                <a href="{% url 'index' %}">English</a>
+                                <a href="{% url 'index_ar' %}">عربية‎ لغة</a>
+                                <a href="{% url 'index_cn' %}">简体中文</a>
+                                <a href="{% url 'index_jp' %}">日本語</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">当前位置: 迪拜 38°C</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="navbar navbar-inverse">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static '/images/logo.png' %}" alt="Logo">
+                </a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right mainNav">
+                    <li class="active"><a href="{% url 'index' %}">主页</a></li>
+                    <li><a href="{% url 'hotel' %}">酒店</a></li>
+                    <li><a href="{% url 'services' %}">服务</a></li>
+                    <li><a href="{% url 'contact' %}">联系</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <header id="head">
+        <div class="container">
+            <div class="fluid_container">
+                <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
+                    <div data-thumb="{% static '/images/dubai.jpg' %}" data-src="{% static '/images/dubai.jpg' %}">
+                    </div> 
+                    <div data-thumb="{% static '/images/Sheraton_Jumeirah_Beach_Resort_3.jpg' %}" data-src="{% static '/images/Sheraton_Jumeirah_Beach_Resort_3.jpg' %}">
+                    </div>
+                    <div data-thumb="{% static '/images/one-and-only-the-palm.jpg' %}" data-src="{% static '/images/one-and-only-the-palm.jpg' %}">
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="head-box" style="margin-top:-20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center last">格兰维尔酒店给您提供极致的居住享受</h2> 
+                    <p class="text-center last">查询可预订客房并探索更多乐趣</p>
+                    <div class="search-panel">
+                        <form class="form-inline" action="{% url 'avail' %}" method="post">
+                              {% csrf_token %}
+                    <!-- 
+                    role="form" 
+                        <div class="form-group hidden-xs adv">
+                            <div class="input-group">
+                                <div class="input-group-addon">Rooms</div>
+                                <div>
+                                    <select class="form-control price">
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div> -->
+                    
+                              
+                        <div class="form-group hidden-xs adv">
+                            <div class="input-group">
+                                <div class="input-group-addon">入住日期</div>
+                                <input class="form-control price" type="date" name="inday">
+                            </div>
+                        </div>
+
+                        <div class="form-group hidden-xs adv">
+                            <div class="input-group">
+                                <div class="input-group-addon">退房日期</div>
+                                <input class="form-control price" type="date" name="outday">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="查询可预订客房" class="btn btnsearch"><br>
+                        </div>     
+                    
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="container">
+        <div class="row">
+            <div class="section-heading">
+                <h2>格兰维尔酒店</h2>
+                <p>格兰维尔酒店天空塔选址于阿联酋迪拜海岸线上风景最为秀丽的绝佳目的地之一，可全方位观赏海景及享受延绵不断近700米私属白沙沙滩。格兰维尔海滩度假村坐落于葱郁的热带园林中，紧邻世界上观看鲨鱼和珊瑚群的最佳地点之一。大城堡酒店则位于海滩边一片奢华的园林式花园之中，为旅行者带来中世纪古堡式的体验。</p>
+                <p>酒店拥有天空塔229间、海滩度假村162间、大城堡109间精心设计的客房。百米高层鸟瞰大海无边际天顶泳池、百米空中SPA以及无可比拟的尊贵性停机坪和直升机之旅、世界一流的高尔夫球场和顶级剧院，以及令人惊叹的场地、精致可口的美食和一丝不苟的服务细节完美融合，为来自全球对生活独具品位的旅行者提供超越期待的体验，缔造非凡感受。</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-cloud fa-2x"></i>
+                    <div class="text">
+                        <h3>沙滩</h3>
+                        酒店的细腻白沙私人海滩。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-heart fa-2x"></i>
+                    <div class="text">
+                        <h3>私人管家</h3>
+                        24小时精致管家服务。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-cutlery fa-2x"></i>
+                    <div class="text">
+                        <h3>餐厅</h3>
+                        异国风情及米其林星级餐厅和酒吧。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-moon-o fa-2x"></i>
+                    <div class="text">
+                        <h3>水疗</h3>
+                        独特空中SPA服务。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-flag fa-2x"></i>
+                    <div class="text">
+                        <h3>游艇</h3>
+                        私人游艇游览阿拉伯湾。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-star fa-2x"></i>
+                    <div class="text">
+                        <h3>水上世界</h3>
+                        入住期间免费欢享水上乐园。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-smile-o fa-2x"></i>
+                    <div class="text">
+                        <h3>儿童俱乐部</h3>
+                        在儿童俱乐部享受美妙亲子时光。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-tag fa-2x"></i>
+                    <div class="text">
+                        <h3>广场</h3>
+                        超过120多家品牌的大型购物广场。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-coffee fa-2x"></i>
+                    <div class="text">
+                        <h3>会议室</h3>
+                        30余间多功能展厅和会议室。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+	
+
+    <footer id="footer">
+        <div class="container">
+            <div class="social text-center">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="{% url 'hotel' %}">关于格兰维尔</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">© 格兰维尔国际</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="{% static '/js/modernizr-latest.js' %}"></script> 
+	<script type='text/javascript' src='{% static '/js/jquery.min.js' %}'></script>
+    <script type='text/javascript' src='{% static '/js/fancybox/jquery.fancybox.pack.js' %}'></script>
+    
+    <script type='text/javascript' src='{% static '/js/jquery.mobile.customized.min.js' %}'></script>
+    <script type='text/javascript' src='{% static '/js/jquery.easing.1.3.js' %}'></script> 
+    <script type='text/javascript' src='{% static '/js/camera.min.js' %}'></script> 
+    <script src="{% static '/js/bootstrap.min.js' %}"></script> 
+	<script src="{% static '/js/custom.js' %}"></script>
+    <script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_4').camera({
+				height: '600',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: false,
+				hover: false,
+				opacityOnGrid: false,
+				imagePath: '{% static '/images/' %}'
+			});
+
+		});
+	</script>
+    
+</body>
+</html>

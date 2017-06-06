@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load staticfiles %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="Granville">
+	<title>Granville</title>
+	<link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/font-awesome.css' %}">
+	<link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}"> 
+	<link rel="stylesheet" href="{% static '/css/bootstrap-theme.css' %}" media="screen"> 
+	<link rel="stylesheet" href="{% static '/css/style1.css' %}">
+    <link rel='stylesheet' id='camera-css' href="{% static '/css/camera.css' %}" type='text/css' media='all'>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="{% static '/js/html5shiv.js' %}"></script>
+	<script src="{% static '/js/respond.min.js' %}"></script>
+	<![endif]-->
+</head>
+<body>
+
+    <div id="footer">
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="{% url 'index_fr' %}">Français</a>
+                                <a href="{% url 'index' %}">English</a>
+                                <a href="{% url 'index_ar' %}">عربية‎ لغة</a>
+                                <a href="{% url 'index_cn' %}">简体中文</a>
+                                <a href="{% url 'index_jp' %}">日本語</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">地元: ドバイ 38°C</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="navbar navbar-inverse">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static '/images/logo.png' %}" alt="Logo">
+                </a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right mainNav">
+                    <li class="active"><a href="{% url 'index' %}">ホーム</a></li>
+                    <li><a href="{% url 'hotel' %}">ホテル</a></li>
+                    <li><a href="{% url 'services' %}">サービス</a></li>
+                    <li><a href="{% url 'contact' %}">コンタクト</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <header id="head">
+        <div class="container">
+            <div class="fluid_container">
+                <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
+                    <div data-thumb="{% static '/images/dubai.jpg' %}" data-src="{% static '/images/dubai.jpg' %}">
+                    </div> 
+                    <div data-thumb="{% static '/images/Sheraton_Jumeirah_Beach_Resort_3.jpg' %}" data-src="{% static '/images/Sheraton_Jumeirah_Beach_Resort_3.jpg' %}">
+                    </div>
+                    <div data-thumb="{% static '/images/one-and-only-the-palm.jpg' %}" data-src="{% static '/images/one-and-only-the-palm.jpg' %}">
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="head-box" style="margin-top:-20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center last">グランビルホテルは、あなたの生活の最大限の楽しみを提供しています</h2> 
+                    <p class="text-center last">グランビルの空室状況をチェックしてレジャーを発見</p>
+                    <div class="search-panel">
+                        <form class="form-inline" action="{% url 'avail' %}" method="post">
+                              {% csrf_token %}
+                    <!-- 
+                    role="form" 
+                        <div class="form-group hidden-xs adv">
+                            <div class="input-group">
+                                <div class="input-group-addon">Rooms</div>
+                                <div>
+                                    <select class="form-control price">
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div> -->
+                    
+                              
+                        <div class="form-group hidden-xs adv">
+                            <div class="input-group">
+                                <div class="input-group-addon">始めます</div>
+                                <input class="form-control price" type="date" name="inday">
+                            </div>
+                        </div>
+
+                        <div class="form-group hidden-xs adv">
+                            <div class="input-group">
+                                <div class="input-group-addon">終了</div>
+                                <input class="form-control price" type="date" name="outday">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="空き状況を確認" class="btn btnsearch"><br>
+                        </div>     
+                    
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="container">
+        <div class="row">
+            <div class="section-heading">
+                <h2>グランビルホテル</h2>
+                <p>グランビルスカイタワーは、アラブ首長国連邦ドバイの最も美しい海岸線の景観の目的地にあります。 装飾的なオーシャンビューを楽しめ、約700mのプライベートな白い砂浜を楽しむことができます。 グランビルビーチリゾートは緑豊かなトロピカルガーデンに囲まれており、世界でも最高のサメ・ウォッチ・スポットとサンゴ・グループの近くにあります。 グレートキャッスルホテルは豪華な美しい庭園内に位置し、中世の環境での旅行者の体験を提供しています。</p>
+                <p>Granvilleには229のスカイタワールーム、162のリゾートルーム、109のキャッスルルームがあります。 屋上スイミングプールから数百メートルの海の鳥瞰図、100メートルの天頂SPAと最高の名誉ヘリコプターツアー、世界クラスのゴルフコース、トップ・シアターを楽しむことができます。 世界中の旅行者にユニークな味わいを提供するために、繊細でおいしい料理、きめ細かで詳細なサービスを完璧に融合させています。</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-cloud fa-2x"></i>
+                    <div class="text">
+                        <h3>ビーチ</h3>
+                        スムーズな白い砂浜とウォータースポーツを楽しめるプライベートビーチ。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-heart fa-2x"></i>
+                    <div class="text">
+                        <h3>執事</h3>
+                        24時間バトラーサービスを洗練します。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-cutlery fa-2x"></i>
+                    <div class="text">
+                        <h3>レストラン</h3>
+                        エキゾチック、ミシュランの星を獲得したレストランとバー。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-moon-o fa-2x"></i>
+                    <div class="text">
+                        <h3>スパ</h3>
+                        オンエアスパサービスを贅沢にする究極の目的地。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-flag fa-2x"></i>
+                    <div class="text">
+                        <h3>ヨット</h3>
+                        アラビア湾に向かうプライベートヨットの自由な選択。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-star fa-2x"></i>
+                    <div class="text">
+                        <h3>親水公園</h3>
+                        滞在中はウォーターパークへの無料アクセスが可能です。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-smile-o fa-2x"></i>
+                    <div class="text">
+                        <h3>キッズクラブ</h3>
+                        両親と子供たちはキッズクラブで素晴らしい時間を楽しむことができます。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-tag fa-2x"></i>
+                    <div class="text">
+                        <h3>プラザ</h3>
+                        90000平方フィート以上の120のブランドを持つプラザ。
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-box">
+                    <i class="fa fa-coffee fa-2x"></i>
+                    <div class="text">
+                        <h3>会議室</h3>
+                        30以上の多機能ホールや会議室があります。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+	
+
+    <footer id="footer">
+        <div class="container">
+            <div class="social text-center">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="{% url 'hotel' %}">グランビルについて</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">© グランビル国際</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="{% static '/js/modernizr-latest.js' %}"></script> 
+	<script type='text/javascript' src='{% static '/js/jquery.min.js' %}'></script>
+    <script type='text/javascript' src='{% static '/js/fancybox/jquery.fancybox.pack.js' %}'></script>
+    
+    <script type='text/javascript' src='{% static '/js/jquery.mobile.customized.min.js' %}'></script>
+    <script type='text/javascript' src='{% static '/js/jquery.easing.1.3.js' %}'></script> 
+    <script type='text/javascript' src='{% static '/js/camera.min.js' %}'></script> 
+    <script src="{% static '/js/bootstrap.min.js' %}"></script> 
+	<script src="{% static '/js/custom.js' %}"></script>
+    <script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_4').camera({
+				height: '600',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: false,
+				hover: false,
+				opacityOnGrid: false,
+				imagePath: '{% static '/images/' %}'
+			});
+
+		});
+	</script>
+    
+</body>
+</html>

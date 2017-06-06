@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load staticfiles %}
+  {% load keyvalue %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Granville">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/font-awesome1.css' %}">
+    <link rel="stylesheet" href="{% static '/css/font-awesome.min1.css' %}"> 
+    <link rel="stylesheet" href="{% static '/css/bootstrap-theme.css' %}" media="screen"> 
+    <link rel="stylesheet" href="{% static '/css/style1.css' %}">
+    <link rel='stylesheet' id='camera-css' href="{% static '/css/camera.css' %}" type='text/css' media='all'>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="{% static '/js/html5shiv.js' %}"></script>
+    <script src="{% static '/js/respond.min.js' %}"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div id="footer">
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="index_fr.html">Français</a>
+                                <a href="index.html">English</a>
+                                <a href="index.html">عربية‎ لغة</a>
+                                <a href="index_cn.html">简体中文</a>
+                                <a href="index_jp.html">日本語</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">Local: Dubai 38°C</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="navbar navbar-inverse">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static '/images/logo.png' %}" alt="Logo">
+                </a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right mainNav">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'hotel' %}">Hotel</a></li>
+                    <li><a href="{% url 'services' %}">Offers</a></li>
+                    <li class="active"><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <header id="head" class="secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1>You're Almost There..</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<h3 class="section-title">Guest Information</h3>
+				<br/>
+                
+                <form action="{% url 'table' %}" method="post"> 
+                    {% csrf_token %}
+				<div class="control-group">
+				    <div class="controls">
+		                <h4>* First Name</h4>
+		                <input type="text" class="form-control" name="fname"/>
+		            </div>
+		        </div>
+		        <div class="control-group">
+				    <div class="controls">
+		                <h4>Middle Name</h4>
+		                <input type="text" class="form-control" name="mname"/>
+		            </div>
+		        </div>
+		        <div class="control-group">
+				    <div class="controls">
+		                <h4>* Last Name</h4>
+		                <input type="text" class="form-control" name="lname"/>
+		            </div>
+		        </div>
+		        <div class="control-group">
+				    <div class="controls">
+		                <h4>* Email Address</h4>
+		                <input type="text" class="form-control" name="email"/>
+		            </div>
+		        </div>
+		        <div class="control-group">
+				    <div class="controls">
+		                <h4>* Phone Number</h4>
+		                <input type="text" class="form-control" name="phone"/>
+		            </div>
+		        </div>
+		        <br/>
+		        <br/>
+		        <h3 class="section-title">Your Reservation Guarantee</h3>
+		        <h4>Card information is needed to guarantee your booking.</h4>
+				<br/>
+              
+				<div class="control-group">
+				    <div class="controls">
+		                <h4>* Card Number</h4>
+		                <input type="text" class="form-control" name="cardn"/>
+		            </div>
+		        </div>
+		        <div class="control-group">
+				    <div class="controls">
+		                <h4>* Card Holder Name</h4>
+		                <input type="text" class="form-control" name="cardnm"/>
+		            </div>
+		        </div>
+		        <div class="control-group">
+				    <div class="controls">
+		                <h4>* Expire Date</h4>
+		                <input type="text" class="form-control" name="eday"/>
+		            </div>
+		        </div>
+		        <div class="control-group">
+				    <div class="controls">
+		                <h4>* CVV Security Code</h4>
+		                <input type="text" class="form-control" name="cvv"/>
+		            </div>
+		        </div>
+	 
+		<div id="success"> </div>
+          <input type="hidden" name="inday" value={{inday}}>
+          <input type="hidden" name="outday" value={{outday}}>
+          <input type="hidden" name="total" value={{total}}>
+          {% for b_rt in booking_sum %}
+               {% with template=rt.rt_id %}
+               {% with myrt=b_rt.rt_id %}
+                    <input type="hidden" name={{b_rt.rt_id}} value={{book_ls|keyvalue:myrt}}>
+               {% endwith %}
+               {% endwith %}
+          {% endfor %}  
+
+<br/>                               
+          <div class="form-group">
+              <input type="submit" value="Pay" class="btn btnsearch"><br>
+          </div>
+		</form>
+					</div>
+					<div class="col-md-7">
+						<div class="row">
+							<div class="col-md-6">
+								<h3 class="section-title">Booking Summary</h3>
+								<div class="contact-info">
+                    								 {% for b_rt in booking_sum %}
+                                            <h4>{{b_rt.room_type}}:{% with myrt=b_rt.rt_id %}{{book_ls|keyvalue:myrt}}{% endwith %}</h4>
+                                        {% endfor %}
+                                        <br/>
+                                        <h4>Check in date: {{inday}}</h4>
+                                        <h4>Check out date: {{outday}}</h4>
+                                        <h4>Bill: AED {{total}}.00 </h4>
+                                        <h4>(Bill in USD {% widthratio total 4 1 %}.00)</h4>
+								</div>
+							</div>
+						</div>					
+					</div>
+				</div>
+			</div>
+
+	
+
+    <footer id="footer">
+        <div class="container">
+            <div class="social text-center">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="{% url 'hotel' %}">About Granville</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">© Granville International</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>  
+    <script src="contact/jqBootstrapValidation.js"></script>
+    <script src="contact/contact_me.js"></script>
+	<script src="assets/js/custom.js"></script>
+
+</body>
+</html>

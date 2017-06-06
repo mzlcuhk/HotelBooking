@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Granville">
+    <title>About</title>
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/font-awesome1.css' %}">
+    <link rel="stylesheet" href="{% static '/css/font-awesome.min1.css' %}"> 
+    <link rel="stylesheet" href="{% static '/css/bootstrap-theme.css' %}" media="screen"> 
+    <link rel="stylesheet" href="{% static '/css/style1.css' %}">
+    <link rel='stylesheet' id='camera-css' href="{% static '/css/camera.css' %}" type='text/css' media='all'>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="{% static '/js/html5shiv.js' %}"></script>
+    <script src="{% static '/js/respond.min.js' %}"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div id="footer">
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="index_fr.html">Français</a>
+                                <a href="index.html">English</a>
+                                <a href="index.html">عربية‎ لغة</a>
+                                <a href="index_cn.html">简体中文</a>
+                                <a href="index_jp.html">日本語</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">Local: Dubai 38°C</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="navbar navbar-inverse">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static '/images/logo.png' %}" alt="Logo">
+                </a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right mainNav">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li class="active"><a href="{% url 'hotel' %}">Hotel</a></li>
+                    <li><a href="{% url 'services' %}">Offers</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <header id="head" class="secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1>About Granville</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <section class="news-box top-margin">
+        <div class="container"> 
+            <div class="row">
+                <div>
+                    <h3>&nbsp;&nbsp;&nbsp;THE SKY TOWER</h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/01.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">One-bedroom Deluxe Suite</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>One master bathroom</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>27-inch iMac and 48-inch 5K TV</li>
+                                            <li>Playstation 4 gaming system</li>
+                                            <li>Remote controlled environment</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Personal yacht</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                        </ul>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/02.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Two-bedroom Deluxe Suite</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>One master bathroom</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>27-inch iMac and 48-inch 5K TV</li>
+                                            <li>Playstation 4 gaming system</li>
+                                            <li>Remote controlled environment</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Personal yacht</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                        </ul>
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/03.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Three-bedroom Deluxe Suite</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>Two master bathrooms</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>Two 27-inch iMacs and 48-inch 5K TV</li>
+                                            <li>Two Playstation 4 gaming systems</li>
+                                            <li>Remote controlled environment</li>
+                                            <li>Media hub with stereophonic sound device system</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Two personal yachts</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/06.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Presidential Suite</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>Two master bathrooms</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>Two 27-inch iMacs and two 48-inch 5K TV</li>
+                                            <li>Two Playstation 4 Pro gaming systems</li>
+                                            <li>Remote controlled environment</li>
+                                            <li>Media hub with stereophonic sound device system</li>
+                                        </ul>
+                                        <p><strong>Amusement</strong></p>
+                                        <ul>
+                                            <li>Large personal library</li>
+                                            <li>Cinema and multimedia centre</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Hundred metres zenith SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Personal yacht</li>
+                                            <li>Complimentary access to golf course</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                            <li>Dubai sightseeing with supercars</li>
+                                            <li>Helicopter tours</li>
+                                        </ul>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/04.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Two-bedroom Panoramic Suite</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Room View</strong></p>
+                                        <ul>
+                                            <li>Magnificent panoramic views of Dubai cityscape</li>
+                                        </ul>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>Two panoramic master bathrooms</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                            <li>5K widescreen with stereophonic sound system</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>Two 27-inch iMacs and two 48-inch 5K TV</li>
+                                            <li>Two Playstation 4 Pro gaming systems</li>
+                                            <li>Remote controlled environment</li>
+                                            <li>Media hub with stereophonic sound device system</li>
+                                        </ul>
+                                        <p><strong>Amusement</strong></p>
+                                        <ul>
+                                            <li>Large personal library</li>
+                                            <li>Cinema and multimedia centre</li>
+                                        </ul>
+                                        <p><strong>Facilities</strong></p>
+                                        <ul>
+                                            <li>Personal lift</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Hundred metres zenith SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Personal yacht</li>
+                                            <li>Complimentary access to golf course</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                            <li>Dubai sightseeing with supercars</li>
+                                            <li>Helicopter tours</li>
+                                        </ul>
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/05.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Three-bedroom Sky View Suite</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Room View</strong></p>
+                                        <ul>
+                                            <li>Magnificent panoramic views of Dubai cityscape</li>
+                                            <li>Magnificent views of the sky</li>
+                                        </ul>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>Two sky-touch master bathrooms</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                            <li>5K widescreen with stereophonic sound system</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>Two 27-inch iMacs and two 48-inch 5K TV</li>
+                                            <li>Two Playstation 4 Pro gaming systems</li>
+                                            <li>Remote controlled environment</li>
+                                            <li>Media hub with stereophonic sound device system</li>
+                                        </ul>
+                                        <p><strong>Amusement</strong></p>
+                                        <ul>
+                                            <li>Large personal library</li>
+                                            <li>Cinema and multimedia centre</li>
+                                        </ul>
+                                        <p><strong>Facilities</strong></p>
+                                        <ul>
+                                            <li>Personal lift</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Hundred metres zenith SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Personal yacht</li>
+                                            <li>Complimentary access to golf course</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                            <li>Dubai sightseeing with supercars</li>
+                                            <li>Helicopter tours</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/07.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Royal Suite</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Room View</strong></p>
+                                        <ul>
+                                            <li>Magnificent panoramic views of Dubai cityscape</li>
+                                        </ul>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                            <li>Enjoyment of symphony orchestra</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>Two panoramic master bathrooms</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>24K gold bathtub</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                            <li>5K widescreen with stereophonic sound system</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>Two 27-inch iMacs and two 48-inch 5K TV</li>
+                                            <li>200-inch 8K arc-shaped widescreen with projector</li>
+                                            <li>Two Playstation 4 Pro gaming systems</li>
+                                            <li>Remote controlled environment</li>
+                                            <li>Media hub with stereophonic sound device system</li>
+                                        </ul>
+                                        <p><strong>Amusement</strong></p>
+                                        <ul>
+                                            <li>Large personal library</li>
+                                            <li>Cinema and multimedia centre</li>
+                                        </ul>
+                                        <p><strong>Facilities</strong></p>
+                                        <ul>
+                                            <li>Personal lift</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Lunch at Michelin 3-star restaurants</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Hundred metres zenith SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Personal yacht</li>
+                                            <li>Complimentary access to golf course</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                            <li>Dubai sightseeing with supercars</li>
+                                            <li>Helicopter tours</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="news-box top-margin">
+        <div class="container"> 
+            <div class="row">
+                <div>
+                    <h3>&nbsp;&nbsp;&nbsp;THE BEACH RESORT</h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/08.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Ocean Deluxe Suite</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Room View</strong></p>
+                                        <ul>
+                                            <li>Magnificent panoramic views of Arabian Gulf</li>
+                                        </ul>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>One master bathroom</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>27-inch iMac and 48-inch 5K TV</li>
+                                            <li>Playstation 4 gaming system</li>
+                                            <li>Remote controlled environment</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Personal yacht</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                        </ul>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/09.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Ocean Royal Suite</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Room View</strong></p>
+                                        <ul>
+                                            <li>Magnificent panoramic views of Arabian Gulf</li>
+                                        </ul>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                            <li>Enjoyment of symphony orchestra</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>Two panoramic master bathrooms</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>24K gold bathtub</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                            <li>5K widescreen with stereophonic sound system</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>Two 27-inch iMacs and two 48-inch 5K TV</li>
+                                            <li>200-inch 8K arc-shaped widescreen with projector</li>
+                                            <li>Two Playstation 4 Pro gaming systems</li>
+                                            <li>Remote controlled environment</li>
+                                            <li>Media hub with stereophonic sound device system</li>
+                                        </ul>
+                                        <p><strong>Amusement</strong></p>
+                                        <ul>
+                                            <li>Large personal library</li>
+                                            <li>Cinema and multimedia centre</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Lunch at Michelin 3-star restaurants</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Hundred metres zenith SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Personal yacht</li>
+                                            <li>Complimentary access to golf course</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                            <li>Dubai sightseeing with supercars</li>
+                                            <li>Helicopter tours</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/10.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Ocean Club Suite</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Room View</strong></p>
+                                        <ul>
+                                            <li>Magnificent panoramic views of Arabian Gulf</li>
+                                        </ul>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>Two master bathrooms</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>Two 27-inch iMacs and 48-inch 5K TV</li>
+                                            <li>Two Playstation 4 gaming systems</li>
+                                            <li>Remote controlled environment</li>
+                                            <li>Media hub with stereophonic sound device system</li>
+                                        </ul>
+                                        <p><strong>Amusement</strong></p>
+                                        <ul>
+                                            <li>Large personal library</li>
+                                            <li>Cinema and multimedia centre</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Two personal yachts</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                        </ul>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/11.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Beach Suite</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Room View</strong></p>
+                                        <ul>
+                                            <li>Magnificent panoramic views of Arabian Gulf</li>
+                                        </ul>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>Two master bathrooms</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>Two 27-inch iMacs and 48-inch 5K TV</li>
+                                            <li>Two Playstation 4 gaming systems</li>
+                                            <li>Remote controlled environment</li>
+                                            <li>Media hub with stereophonic sound device system</li>
+                                        </ul>
+                                        <p><strong>Amusement</strong></p>
+                                        <ul>
+                                            <li>Large personal library</li>
+                                            <li>Cinema and multimedia centre</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Two personal yachts</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                        </ul>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/12.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Underwater Suite</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Room View</strong></p>
+                                        <ul>
+                                            <li>Magnificent 360° view of the ocean</li>
+                                        </ul>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                            <li>Enjoyment of symphony orchestra</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>Two 360° underwater view master bathrooms</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                            <li>5K widescreen with stereophonic sound system</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>Two 27-inch iMacs and two 48-inch 5K TV</li>
+                                            <li>Two Playstation 4 Pro gaming systems</li>
+                                            <li>Remote controlled environment</li>
+                                            <li>Media hub with stereophonic sound device system</li>
+                                        </ul>
+                                        <p><strong>Amusement</strong></p>
+                                        <ul>
+                                            <li>Large personal library</li>
+                                            <li>Cinema and multimedia centre</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Lunch at Michelin 3-star restaurants</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Hundred metres zenith SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Personal yacht</li>
+                                            <li>Complimentary access to golf course</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                            <li>Dubai sightseeing with supercars</li>
+                                            <li>Helicopter tours</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="news-box top-margin">
+        <div class="container"> 
+            <div class="row">
+                <div>
+                    <h3>&nbsp;&nbsp;&nbsp;THE GREAT CASTLE</h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/13.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Solar</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Room Environment</strong></p>
+                                        <ul>
+                                            <li>The European medieval castle atmosphere</li>
+                                        </ul>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>One master bathroom</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>27-inch iMac and 48-inch 5K TV</li>
+                                            <li>Playstation 4 gaming system</li>
+                                            <li>Remote controlled environment</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Personal yacht</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                        </ul>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/14.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Lord's Chamber</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Room Environment</strong></p>
+                                        <ul>
+                                            <li>The European medieval castle atmosphere</li>
+                                        </ul>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>Two master bathrooms</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>Two 27-inch iMacs and 48-inch 5K TV</li>
+                                            <li>Two Playstation 4 gaming systems</li>
+                                            <li>Remote controlled environment</li>
+                                            <li>Media hub with stereophonic sound device system</li>
+                                        </ul>
+                                        <p><strong>Amusement</strong></p>
+                                        <ul>
+                                            <li>Large personal library</li>
+                                            <li>Cinema and multimedia centre</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Two personal yachts</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                        </ul>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/15.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">King's Chamber</h4>
+                                        <br/>
+                                        <p>AMENITIES INCLUDED</p>
+                                        <p><strong>Room Environment</strong></p>
+                                        <ul>
+                                            <li>The European medieval castle atmosphere</li>
+                                        </ul>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>Two panoramic master bathrooms</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                            <li>5K widescreen with stereophonic sound system</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>Two 27-inch iMacs and two 48-inch 5K TV</li>
+                                            <li>Two Playstation 4 Pro gaming systems</li>
+                                            <li>Remote controlled environment</li>
+                                            <li>Media hub with stereophonic sound device system</li>
+                                        </ul>
+                                        <p><strong>Amusement</strong></p>
+                                        <ul>
+                                            <li>Large personal library</li>
+                                            <li>Cinema and multimedia centre</li>
+                                        </ul>
+                                        <p><strong>Facilities</strong></p>
+                                        <ul>
+                                            <li>Personal lift</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Hundred metres zenith SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Personal yacht</li>
+                                            <li>Complimentary access to golf course</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                            <li>Dubai sightseeing with supercars</li>
+                                            <li>Helicopter tours</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="{% static '/images/16.jpg' %}" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <h4 class="title">Throne Room</h4>
+                                        <br/>
+                                        <p><strong>Room Environment</strong></p>
+                                        <ul>
+                                            <li>The European medieval castle atmosphere</li>
+                                            <li>The most powerful place at castle</li>
+                                        </ul>
+                                        <p><strong>Personal service</strong></p>
+                                        <ul>
+                                            <li>24-hour delicate chamberlain service</li>
+                                            <li>Personalized private bars</li>
+                                            <li>Daily meal buffet</li>
+                                            <li>Enjoyment of symphony orchestra</li>
+                                        </ul>
+                                        <p><strong>Bathroom</strong></p>
+                                        <ul>
+                                            <li>Two panoramic master bathrooms</li>
+                                            <li>Full-size Jacuzzi and deluxe shower system</li>
+                                            <li>24K gold bathtub</li>
+                                            <li>Full-size CHANEL cleansing amenities and skincare</li>
+                                            <li>5K widescreen with stereophonic sound system</li>
+                                        </ul>
+                                        <p><strong>Technology</strong></p>
+                                        <ul>
+                                            <li>Complementary Wi-Fi</li>
+                                            <li>Two 27-inch iMacs and two 48-inch 5K TV</li>
+                                            <li>200-inch 8K arc-shaped widescreen with projector</li>
+                                            <li>Two Playstation 4 Pro gaming systems</li>
+                                            <li>Remote controlled environment</li>
+                                            <li>Media hub with stereophonic sound device system</li>
+                                        </ul>
+                                        <p><strong>Amusement</strong></p>
+                                        <ul>
+                                            <li>Large personal library</li>
+                                            <li>Cinema and multimedia centre</li>
+                                        </ul>
+                                        <p><strong>Facilities</strong></p>
+                                        <ul>
+                                            <li>Personal lift</li>
+                                        </ul>
+                                        <br/>
+                                        <p>SERVICES</p>
+                                        <p><strong>At hotel</strong></p>
+                                        <ul>
+                                            <li>A selection of restaurants and bars</li>
+                                            <li>Lunch at Michelin 3-star restaurants</li>
+                                            <li>Deluxe SPA</li>
+                                            <li>Hundred metres zenith SPA</li>
+                                            <li>Complimentary access to fitness centre</li>
+                                            <li>Rooftop swimming pool</li>
+                                        </ul>
+                                        <p><strong>At beach</strong></p>
+                                        <ul>
+                                            <li>Private Granville beach</li>
+                                            <li>Surfing, underwater diving and more</li>
+                                            <li>Personal yacht</li>
+                                            <li>Complimentary access to golf course</li>
+                                        </ul>
+                                        <p><strong>Entertainment</strong></p>
+                                        <ul>
+                                            <li>Luxury shopping centre</li>
+                                            <li>Complimentary access to Water Park</li>
+                                            <li>Complimentary access to Kids Club</li>
+                                            <li>Dubai sightseeing with supercars</li>
+                                            <li>Helicopter tours</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    
+    <footer id="footer">
+        <div class="container">
+            <div class="social text-center">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="{% url 'hotel' %}">About Granville</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="text-right">© Granville International</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+    <script src="{% static '/js/jquery.min.js' %}"></script>
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/custom.js' %}"></script>
+</body>
+</html>
